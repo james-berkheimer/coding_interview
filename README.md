@@ -18,7 +18,7 @@ pip install -e .
 
 ## Usage
 
-The command for this project is `met_query`
+The command name for this project is `met_query`
 
 Example:
 ```bash
