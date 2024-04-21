@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "coding_interview"
+description = "A CLI tool to create empty Python projects"
+authors = [{name = "James Berkheimer", email = "james.berkheimer@gmail.com"}]
+license = {text = "MIT"}
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+    "requests",
+    "requests_cache",
+    "ratelimit",
+    "pandas",
+
+]
+
+[project.optional-dependencies]
+dev = []
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.scripts]
+met_query = "coding_interview.cli:met_cli"
+query1 = "coding_interview.scratch_code:query1"
+query2 = "coding_interview.scratch_code:query2"
+query3 = "coding_interview.scratch_code:query3"
+
+[project.urls]
+homepage = "https://example.com"
+
+[tool.setuptools]
+include-package-data = true
+platforms = ["any"]
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+exclude = ["tests"]
+namespaces = true
+where = ["src"]
