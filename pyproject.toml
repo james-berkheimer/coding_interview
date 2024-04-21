@@ -16,11 +16,12 @@ classifiers = [
 ]
 requires-python = ">=3.9"
 dependencies = [
+    "aiohttp",
+    "asyncio_throttle",
     "click",
     "requests",
-    "requests_cache",
     "ratelimit",
-    "pandas",
+    "tenacity"
 
 ]
 
