@@ -38,7 +38,7 @@ met_cli.add_command(print_total_objects)
     help="Input IDs to search for. Can be a single integer (e.g., '5'), a range of integers (e.g., '1-20') a list of integers (e.g., '1, 4, 6, 8'), or 0 for all object IDs.",
 )
 @click.option(
-    "--limit", default=None, type=int, help="Limit the number of results returned."
+    "--limit", default=80, type=int, help="Limit the number of results returned."
 )
 @click.option("--search_string", default=None, help="Search string for classification.")
 @click.option("--ascending", default=True, type=bool, help="Order of date of creation.")
